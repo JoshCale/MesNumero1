@@ -1,0 +1,21 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fff8fb;--rose:#d94f70;--dark:#321c27}
+body{min-height:100vh;font-family:Georgia,"Times New Roman",serif;color:var(--dark);background:radial-gradient(circle at 20% 20%,rgba(217,79,112,.13),transparent 28%),radial-gradient(circle at 80% 70%,rgba(216,163,77,.12),transparent 30%),var(--bg);overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px 20px;position:relative}
+.glow{position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(255,190,205,.28);filter:blur(45px);animation:breathe 4s ease-in-out infinite}
+.eyebrow,.small-title{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--rose);position:relative}
+h1{font-size:clamp(2.7rem,9vw,6rem);line-height:.95;margin:18px 0 14px;position:relative}
+.subtitle{font-size:clamp(1.15rem,3vw,1.6rem);font-style:italic;position:relative}
+.open-btn,.continue-btn{border:0;cursor:pointer;border-radius:999px;padding:14px 26px;font-size:1rem;margin-top:34px;background:var(--rose);color:white;box-shadow:0 12px 30px rgba(217,79,112,.24);transition:.25s;position:relative}
+.open-btn:hover,.continue-btn:hover{transform:translateY(-3px)}
+.message{max-width:650px;margin-top:28px;font-size:1.12rem;line-height:1.75;animation:appear .8s ease both;position:relative}
+.message strong{color:var(--rose)}
+.story{max-width:900px;margin:0 auto;padding:40px 20px 100px}
+.card{background:rgba(255,255,255,.82);border:1px solid rgba(217,79,112,.12);border-radius:28px;padding:34px;margin:22px 0;box-shadow:0 18px 55px rgba(50,28,39,.08);text-align:center}
+.card h2{font-size:clamp(1.8rem,5vw,2.7rem);margin:12px 0}
+.card p:not(.small-title):not(.signature){line-height:1.8;font-size:1.05rem}
+.flower{font-size:2.3rem}.signature{margin-top:24px;font-style:italic;line-height:1.7}
+.hidden{display:none}
+@keyframes appear{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathe{0%,100%{transform:scale(.95);opacity:.65}50%{transform:scale(1.08);opacity:.95}}
+@media(max-width:600px){.card{padding:26px 20px}h1{max-width:360px}}
